@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#shuffleContainer img {
+    width: 100px;
+    cursor: pointer;
+}
+
+#orderContainer {
+    border: 2px solid #ccc;
+    padding: 10px;
+    min-height: 100px;
+    margin-top: 20px;
+}
+
+#resultMessage {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}

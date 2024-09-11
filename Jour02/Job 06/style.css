@@ -1,0 +1,30 @@
+/* style.css */
+
+/* Styles par défaut (vide) */
+body {
+    background-color: blue;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Styles activés par le code Konami */
+.konami-mode {
+    background-color: blue; /* Couleur de fond de La Plateforme_ */
+    color: #ecf0f1;            /* Couleur du texte */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.5s ease;
+}
+
+.konami-mode h1 {
+    color: #f39c12; /* Couleur du texte spécifique */
+    font-size: 3em;
+}
+
+.konami-mode p {
+    color: #ecf0f1; /* Couleur du texte */
+    font-size: 1.5em;
+}
