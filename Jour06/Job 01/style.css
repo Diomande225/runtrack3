@@ -1,0 +1,63 @@
+body {
+    background-color: #f2f2f2; /* Gris clair comme sur l'image */
+}
+
+.navbar {
+    background-color: #ffffff !important; /* Fond blanc pour la barre de navigation */
+}
+
+.container {
+    background-color: #ffffff; /* Fond blanc pour le contenu principal */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px; /* Espace en haut du conteneur */
+}
+
+h1 {
+    color: #333;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.list-group-item.active {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.progress-bar {
+    background-color: #886c1a; /* Yellow color for progress bar */
+}
+
+/* Custom styles for form elements */
+.form-control {
+    border-radius: 0;
+}
+
+/* Adjust spacing */
+.mt-4 {
+    margin-top: 2rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 2rem !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .col-md-3, .col-md-6 {
+        margin-bottom: 20px;
+    }
+}
