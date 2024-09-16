@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création de compte</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html">Inscription</a></li>
+                <li><a href="index.html">Connexion</a></li>
+                <li><a href="index.html">Rechercher</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Création de compte</h1>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Civilité</legend>
+                <input type="radio" id="mr" name="civilite" value="mr">
+                <label for="mr">Monsieur</label>
+                <input type="radio" id="mme" name="civilite" value="mme">
+                <label for="mme">Madame</label>
+            </fieldset>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="adresse">Adresse :</label>
+            <input type="text" id="adresse" name="adresse" required>
+
+            <label for="email">Adresse email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="password_confirm">Confirmation du mot de passe :</label>
+            <input type="password" id="password_confirm" name="password_confirm" required>
+
+            <fieldset>
+                <legend>Passions</legend>
+                <input type="checkbox" id="informatique" name="passions" value="informatique">
+                <label for="informatique">Informatique</label>
+                <input type="checkbox" id="voyages" name="passions" value="voyages">
+                <label for="voyages">Voyages</label>
+                <input type="checkbox" id="sport" name="passions" value="sport">
+                <label for="sport">Sport</label>
+                <input type="checkbox" id="lecture" name="passions" value="lecture">
+                <label for="lecture">Lecture</label>
+            </fieldset>
+
+            <button type="submit">Créer le compte</button>
+        </form>
+    </section>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html">Inscription</a></li>
+                <li><a href="index.html">Connexion</a></li>
+                <li><a href="index.html">Rechercher</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
