@@ -57,7 +57,23 @@
         "nom": "sindou",
         "email": "sindou@laplateforme.io",
         "password": "$2y$10$Th1FwtpoTfzQzvsiUFNZs.TxCkLR..sdbjg8F7ppCvUHYuA5\/gz3u",
+        "role": "administrateur",
+        "statut": "Approuv\u00e9"
+    },
+    {
+        "id": 9,
+        "nom": "moussa",
+        "email": "moussa@laplateforme.io",
+        "password": "$2y$10$ZZobmDb1D40x9kAg2pOjsOant8yBVPQKczMCLgcBcng.UoNUIXnd.",
         "role": "utilisateur",
-        "statut": "En attente"
+        "statut": "Approuv\u00e9"
+    },
+    {
+        "id": 10,
+        "nom": "issa",
+        "email": "issa@laplateforme.io",
+        "password": "$2y$10$qJeoYWYzA2JSVDN\/t793nOzkahmrcn9wALivXHK1sZVrmQ5GNpERe",
+        "role": "utilisateur",
+        "statut": "Approuv\u00e9"
     }
 ]

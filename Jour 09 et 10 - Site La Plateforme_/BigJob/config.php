@@ -40,22 +40,21 @@ function sync_json_to_db($json_file, $table, $pdo) {
 
         // Obtenir les colonnes de la table
         $stmt = $pdo->query("DESCRIBE $table");
-        $columns = $stmt->fetchAll(PDO::FETCH_COLUMN);
-
-        // Filtrer les données JSON pour ne garder que les colonnes existantes dans la table
-        $filtered_data = array_map(function($item) use ($columns) {
-            return array_intersect_key($item, array_flip($columns));
-        }, $data);
+        $db_columns = $stmt->fetchAll(PDO::FETCH_COLUMN);
 
         // Préparer la requête d'insertion
-        $columns = implode(", ", array_keys($filtered_data[0]));
-        $placeholders = ":" . implode(", :", array_keys($filtered_data[0]));
-        $sql = "INSERT INTO $table ($columns) VALUES ($placeholders)";
+        $columns = array_intersect(array_keys($data[0]), $db_columns);
+        $placeholders = array_fill(0, count($columns), '?');
+        $sql = "INSERT INTO $table (" . implode(", ", $columns) . ") VALUES (" . implode(", ", $placeholders) . ")";
         $stmt = $pdo->prepare($sql);
 
         // Insérer les données
-        foreach ($filtered_data as $item) {
-            $stmt->execute($item);
+        foreach ($data as $item) {
+            $values = array();
+            foreach ($columns as $column) {
+                $values[] = isset($item[$column]) ? $item[$column] : null;
+            }
+            $stmt->execute($values);
         }
 
         // Réactiver les contraintes de clé étrangère

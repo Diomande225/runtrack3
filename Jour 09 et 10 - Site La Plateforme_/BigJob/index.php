@@ -18,14 +18,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['register'])) {
             'email' => $email,
             'password' => $hashed_password,
             'role' => 'utilisateur',
-            'statut' => 'En attente'
+            'statut' => 'Approuvé'
         ];
         $users[] = $new_user;
         
         save_json_data($users_json_file, $users);
         sync_json_to_db($users_json_file, 'users', $pdo);
         
-        $register_message = "Inscription réussie ! Votre compte est en attente d'approbation.";
+        $_SESSION['user_id'] = $new_user['id'];
+        $_SESSION['nom'] = $new_user['nom'];
+        $_SESSION['role'] = $new_user['role'];
+        header('Location: calendrier.php');
+        exit;
     } else {
         $register_message = "Erreur : L'adresse email doit être du domaine @laplateforme.io";
     }
@@ -39,25 +43,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
     
     foreach ($users as $user) {
         if ($user['email'] === $email && password_verify($password, $user['password'])) {
-            if ($user['statut'] === 'Approuvé') {
-                $_SESSION['user_id'] = $user['id'];
-                $_SESSION['nom'] = $user['nom'];
-                $_SESSION['role'] = $user['role'];
-                
-                if ($_SESSION['role'] === 'administrateur') {
-                    header('Location: admin.php');
-                } else {
-                    header('Location: calendrier.php');
-                }
-                exit;
-            } else {
-                $login_message = "Votre compte est en attente d'approbation ou a été refusé.";
-            }
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['nom'] = $user['nom'];
+            $_SESSION['role'] = $user['role'];
+            
+            header('Location: calendrier.php');
+            exit;
         }
     }
-    if (!isset($login_message)) {
-        $login_message = "Erreur : Email ou mot de passe incorrect.";
-    }
+    $login_message = "Erreur : Email ou mot de passe incorrect.";
 }
 ?>
 
@@ -69,7 +63,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
     <title>La Plateforme_ - Connexion/Inscription</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
-    <script src="js/main.js" defer></script>
 </head>
 <body>
     <div class="container mt-5">
@@ -109,5 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

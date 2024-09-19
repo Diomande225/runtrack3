@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création de compte</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen">
+    <header class="bg-blue-500 p-4">
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="text-white hover:underline">Accueil</a></li>
+                <li><a href="index.html" class="text-white hover:underline">Inscription</a></li>
+                <li><a href="index.html" class="text-white hover:underline">Connexion</a></li>
+                <li><a href="index.html" class="text-white hover:underline">Rechercher</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-grow container mx-auto mt-8 p-4">
+        <section>
+            <h1 class="text-2xl font-bold mb-4">Création de compte</h1>
+            <form class="space-y-4">
+                <div>
+                    <p class="mb-2">Civilité :</p>
+                    <label class="inline-flex items-center mr-4">
+                        <input type="radio" name="civilite" value="m" class="form-radio">
+                        <span class="ml-2">M.</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="radio" name="civilite" value="mme" class="form-radio">
+                        <span class="ml-2">Mme</span>
+                    </label>
+                </div>
+
+                <div>
+                    <label for="prenom" class="block mb-1">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom" class="w-full border rounded p-2">
+                </div>
+
+                <div>
+                    <label for="nom" class="block mb-1">Nom :</label>
+                    <input type="text" id="nom" name="nom" class="w-full border rounded p-2">
+                </div>
+
+                <div>
+                    <label for="adresse" class="block mb-1">Adresse :</label>
+                    <input type="text" id="adresse" name="adresse" class="w-full border rounded p-2">
+                </div>
+
+                <div>
+                    <label for="email" class="block mb-1">Email :</label>
+                    <input type="email" id="email" name="email" class="w-full border rounded p-2">
+                </div>
+
+                <div>
+                    <label for="password" class="block mb-1">Mot de passe :</label>
+                    <input type="password" id="password" name="password" class="w-full border rounded p-2">
+                </div>
+
+                <div>
+                    <label for="password_confirm" class="block mb-1">Confirmation du mot de passe :</label>
+                    <input type="password" id="password_confirm" name="password_confirm" class="w-full border rounded p-2">
+                </div>
+
+                <div>
+                    <p class="mb-2">Passions :</p>
+                    <label class="inline-flex items-center mr-4">
+                        <input type="checkbox" name="passions[]" value="informatique" class="form-checkbox">
+                        <span class="ml-2">Informatique</span>
+                    </label>
+                    <label class="inline-flex items-center mr-4">
+                        <input type="checkbox" name="passions[]" value="voyages" class="form-checkbox">
+                        <span class="ml-2">Voyages</span>
+                    </label>
+                    <label class="inline-flex items-center mr-4">
+                        <input type="checkbox" name="passions[]" value="sport" class="form-checkbox">
+                        <span class="ml-2">Sport</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" name="passions[]" value="lecture" class="form-checkbox">
+                        <span class="ml-2">Lecture</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Créer le compte</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-gray-200 p-4 mt-8">
+        <ul class="flex justify-center space-x-4">
+            <li><a href="index.html" class="text-blue-500 hover:underline">Accueil</a></li>
+            <li><a href="index.html" class="text-blue-500 hover:underline">Inscription</a></li>
+            <li><a href="index.html" class="text-blue-500 hover:underline">Connexion</a></li>
+            <li><a href="index.html" class="text-blue-500 hover:underline">Rechercher</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

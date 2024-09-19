@@ -4,20 +4,8 @@ require_once 'config.php';
 
 // Vérification de l'authentification et des droits d'administrateur
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'administrateur') {
-    header('Location: index.php');
+    header('Location: calendrier.php');
     exit;
-}
-
-// Fonction pour obtenir les demandes
-function get_demandes() {
-    global $demandes_json_file;
-    return get_json_data($demandes_json_file);
-}
-
-// Fonction pour sauvegarder les demandes
-function save_demandes($demandes) {
-    global $demandes_json_file;
-    save_json_data($demandes_json_file, $demandes);
 }
 
 // Traitement des actions
@@ -27,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $demande_id = $_POST['demande_id'];
         $new_status = isset($_POST['approve_demande']) ? 'Approuvée' : 'Refusée';
         
-        $demandes = get_demandes();
+        $demandes = get_json_data($demandes_json_file);
         
         foreach ($demandes as &$demande) {
             if ($demande['id'] == $demande_id) {
@@ -36,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         }
         
-        save_demandes($demandes);
+        save_json_data($demandes_json_file, $demandes);
         sync_json_to_db($demandes_json_file, 'demandes', $pdo);
         $action_message = "La demande a été " . strtolower($new_status) . " avec succès.";
     }
@@ -74,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 // Récupération des données
-$demandes = get_demandes();
+$demandes = get_json_data($demandes_json_file);
 $users = get_json_data($users_json_file);
 
 ?>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de création de compte</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html">Inscription</a></li>
+                <li><a href="index.html">Connexion</a></li>
+                <li><a href="index.html">Rechercher</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section Formulaire -->
+    <section>
+        <h1>Créer un compte</h1>
+        <form action="#" method="POST">
+
+            <!-- Civilité -->
+            <div>
+                <label>Civilité :</label>
+                <input type="radio" name="civilite" value="monsieur"> Mr
+                <input type="radio" name="civilite" value="madame"> Mme
+            </div>
+
+            <!-- Prénom, Nom, Adresse -->
+            <div>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom">
+            </div>
+
+            <div>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom">
+            </div>
+
+            <div>
+                <label for="adresse">Adresse :</label>
+                <input type="text" id="adresse" name="adresse">
+            </div>
+
+            <!-- Email -->
+            <div>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <!-- Mot de passe -->
+            <div>
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div>
+                <label for="password_confirm">Confirmer le mot de passe :</label>
+                <input type="password" id="password_confirm" name="password_confirm">
+            </div>
+
+            <!-- Passions -->
+            <div>
+                <label>Passions :</label>
+                <input type="checkbox" name="passion" value="informatique"> Informatique
+                <input type="checkbox" name="passion" value="voyages"> Voyages
+                <input type="checkbox" name="passion" value="sport"> Sport
+                <input type="checkbox" name="passion" value="lecture"> Lecture
+            </div>
+
+            <!-- Bouton de validation -->
+            <div>
+                <button type="submit">Créer le compte</button>
+            </div>
+
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html">Inscription</a></li>
+            <li><a href="index.html">Connexion</a></li>
+            <li><a href="index.html">Rechercher</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>

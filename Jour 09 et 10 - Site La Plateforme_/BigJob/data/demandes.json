@@ -123,5 +123,19 @@
         "date_presence": "2024-09-26",
         "date_demande": "2024-09-18",
         "statut": "Approuv\u00e9e"
+    },
+    {
+        "id": 18,
+        "user_id": 8,
+        "date_presence": "2024-09-25",
+        "date_demande": "2024-09-19",
+        "statut": "Approuv\u00e9e"
+    },
+    {
+        "id": 19,
+        "user_id": 9,
+        "date_presence": "2024-09-26",
+        "date_demande": "2024-09-19",
+        "statut": "En attente"
     }
 ]
