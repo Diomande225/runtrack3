@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "nom": "adama.diomande",
+        "email": "adama.diomande@laplateforme.io",
+        "password": "$2y$10$YourHashedPasswordHere",
+        "role": "administrateur",
+        "statut": "Approuvé"
+    },
+    {
+        "nom":"Simple",
+        "email":"sim220@laplateforme.io",
+        "password":"$2y$10$m.FuGO6jfQOSqLw28ScnveDnlQm8SXzaoX.qTySVie0djnolCCcoa",
+        "role":"utilisateur"}
+]

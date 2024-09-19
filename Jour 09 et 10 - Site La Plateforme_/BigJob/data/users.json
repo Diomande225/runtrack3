@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "nom": "adama.diomande",
+        "email": "adama.diomande@laplateforme.io",
+        "password": "$2y$10$YcU2zsyyzzQmPNOkp6LrkOT6WaAkSkJaqukqDJ3D2G1fEBhucdU0a",
+        "role": "administrateur",
+        "statut": "Approuv\u00e9"
+    },
+    {
+        "id": 2,
+        "nom": "roi23",
+        "email": "roi23@laplateforme.io",
+        "password": "$2y$10$.aTjBbu50C8p5Mo2vhYYSOZ3vgwillniz\/ISXI.cgJ1LqddbLlU8y",
+        "role": "utilisateur"
+    },
+    {
+        "id": 3,
+        "nom": "jule33",
+        "email": "jule33@laplateforme.io",
+        "password": "$2y$10$W53xAMnCYvKpnUKcYHCwHOLIuG69o9myj7Kw4Pfnid0xmqur\/3M5.",
+        "role": "utilisateur"
+    },
+    {
+        "id": 4,
+        "nom": "ledur",
+        "email": "ledur@laplateforme.io",
+        "password": "$2y$10$lOCg9GXMOYoNrFpX6NZdlu2C607ePBCPDIADkglhU.lqDrwIOoQ42",
+        "role": "utilisateur"
+    },
+    {
+        "id": 5,
+        "nom": "adama.diomande",
+        "email": "adama.diomande@laplateforme.io",
+        "password": "$2y$10$LlCWROSSUim.Uyd6dZBU5uOihZojYmLqeF6bpy0KLRIfMDqYpGnCy",
+        "role": "utilisateur",
+        "statut": "En attente"
+    },
+    {
+        "id": 6,
+        "nom": "adama.diomande",
+        "email": "adama.diomande@laplateforme.io",
+        "password": "$2y$10$u5z55M0FlyGXbIGy1J7sHeQZwfq5bFRmAXOi7iSr4tEjgnDUQpOS.",
+        "role": "utilisateur",
+        "statut": "En attente"
+    },
+    {
+        "id": 7,
+        "nom": "adama.diomande",
+        "email": "adama.diomande@laplateforme.io",
+        "password": "$2y$10$XVyAxew5Qbo7ylnHH9DiOuuqZ3CV.AaUijjSyfV0nYXYr3a234x..",
+        "role": "utilisateur",
+        "statut": "En attente"
+    },
+    {
+        "id": 8,
+        "nom": "sindou",
+        "email": "sindou@laplateforme.io",
+        "password": "$2y$10$Th1FwtpoTfzQzvsiUFNZs.TxCkLR..sdbjg8F7ppCvUHYuA5\/gz3u",
+        "role": "utilisateur",
+        "statut": "En attente"
+    }
+]

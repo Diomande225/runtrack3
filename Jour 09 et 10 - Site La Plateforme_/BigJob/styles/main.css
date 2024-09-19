@@ -1,0 +1,77 @@
+body {
+    padding-top: 20px;
+    background-color: #f8f9fa;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #007bff;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.table-actions {
+    min-width: 200px;
+}
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+.btn-primary, .btn-success, .btn-danger {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover, .btn-success:hover, .btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.alert {
+    margin-bottom: 20px;
+}
+
+.expired {
+    background-color: #f8d7da;
+}
+
+@media (max-width: 768px) {
+    .table-actions {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .table-actions .btn,
+    .table-actions .form-select {
+        margin-bottom: 5px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 769px) {
+    .table-actions form {
+        display: flex;
+        align-items: center;
+    }
+
+    .table-actions .form-select {
+        margin-right: 10px;
+    }
+}
