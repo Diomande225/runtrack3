@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigJob - Calendrier des rendez-vous</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.css">
+    <link rel="stylesheet" href="/Assets/styles/custom.css">
+</head>
+<body>
+    <nav class="blue darken-2">
+        <div class="nav-wrapper container">
+            <a href="/index.html" class="brand-logo">BigJob</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/page/profil.html">Mon Profil</a></li>
+                <li><a href="#" id="boutonDeconnexion">Déconnexion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2 class="center-align">Calendrier des rendez-vous</h2>
+        <div id="calendar"></div>
+        
+        <div id="modalRendezVous" class="modal">
+            <div class="modal-content">
+                <h4>Prendre un rendez-vous</h4>
+                <form id="formulaireRendezVous">
+                    <div class="input-field">
+                        <input id="dateRendezVous" type="text" class="datepicker">
+                        <label for="dateRendezVous">Date</label>
+                    </div>
+                    <div class="input-field">
+                        <input id="heureRendezVous" type="text" class="timepicker">
+                        <label for="heureRendezVous">Heure</label>
+                    </div>
+                    <div class="input-field">
+                        <textarea id="descriptionRendezVous" class="materialize-textarea"></textarea>
+                        <label for="descriptionRendezVous">Description</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Annuler</a>
+                <a href="#!" id="sauvegarderRendezVous" class="waves-effect waves-green btn-flat">Sauvegarder</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/locales-all.min.js"></script>
+    <script src="/Assets/js/calendar.js"></script>
+</body>
+</html>

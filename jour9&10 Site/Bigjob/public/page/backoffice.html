@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigJob - Back Office</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/Assets/styles/custom.css">
+</head>
+<body>
+    <nav class="blue darken-2">
+        <div class="nav-wrapper container">
+            <a href="/index.html" class="brand-logo">BigJob Back Office</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/page/admin.html">Administration</a></li>
+                <li><a href="#" id="logoutBtn">Déconnexion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2 class="center-align">Back Office</h2>
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a href="#users">Utilisateurs</a></li>
+                    <li class="tab col s3"><a href="#jobs">Offres d'emploi</a></li>
+                    <li class="tab col s3"><a href="#companies">Entreprises</a></li>
+                    <li class="tab col s3"><a href="#reports">Rapports</a></li>
+                </ul>
+            </div>
+            <div id="users" class="col s12">
+                <h3>Gestion des utilisateurs</h3>
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nom</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersList">
+                        <!-- Les utilisateurs seront ajoutés ici dynamiquement -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="jobs" class="col s12">
+                <h3>Gestion des offres d'emploi</h3>
+                <!-- Contenu pour la gestion des offres d'emploi -->
+            </div>
+            <div id="companies" class="col s12">
+                <h3>Gestion des entreprises</h3>
+                <!-- Contenu pour la gestion des entreprises -->
+            </div>
+            <div id="reports" class="col s12">
+                <h3>Rapports</h3>
+                <!-- Contenu pour les rapports -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer blue darken-2">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">BigJob Back Office</h5>
+                    <p class="grey-text text-lighten-4">Gérez en détail tous les aspects de votre plateforme.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2023 BigJob
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/Assets/js/backoffice.js"></script>
+</body>
+</html>

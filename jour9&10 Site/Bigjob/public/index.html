@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigJob - Accueil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/Assets/styles/custom.css">
+</head>
+<body>
+    <nav class="blue darken-2">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">BigJob</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li id="nav-connexion"><a href="/page/login.html">Connexion</a></li>
+                <li id="nav-inscription"><a href="/page/register.html">Inscription</a></li>
+                <li id="nav-utilisateur" style="display: none;"></li>
+                <li id="nav-calendrier" style="display: none;"><a href="/page/calendrier.html">Calendrier</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="center-align">Bienvenue sur BigJob</h1>
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Trouvez votre emploi idéal</span>
+                        <p>BigJob vous aide à trouver l'emploi qui correspond à vos compétences et à vos aspirations.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="/page/register.html">S'inscrire</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Recrutez les meilleurs talents</span>
+                        <p>Trouvez les candidats parfaits pour votre entreprise grâce à notre plateforme de recrutement innovante.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="/page/login.html">Connexion recruteur</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer blue darken-2">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">BigJob</h5>
+                    <p class="grey-text text-lighten-4">Votre partenaire pour l'emploi et le recrutement.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Liens</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">À propos</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2023 BigJob
+                <a class="grey-text text-lighten-4 right" href="#!">Plus de liens</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const utilisateur = JSON.parse(localStorage.getItem('utilisateur'));
+            if (utilisateur) {
+                document.getElementById('nav-connexion').style.display = 'none';
+                document.getElementById('nav-inscription').style.display = 'none';
+                document.getElementById('nav-utilisateur').style.display = 'block';
+                document.getElementById('nav-utilisateur').textContent = `Bonjour, ${utilisateur.nom}`;
+                document.getElementById('nav-calendrier').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
