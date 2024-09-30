@@ -43,9 +43,10 @@ async function gererConnexion(evenement) {
 
         if (reponse.ok) {
             M.toast({html: 'Connexion réussie !'});
-            console.log('Redirection vers la page d\'accueil dans 2 secondes');
+            localStorage.setItem('utilisateur', JSON.stringify(donnees));
+            console.log('Redirection vers la page du calendrier dans 2 secondes');
             setTimeout(() => {
-                window.location.href = '/index.html'; // Assurez-vous que ce chemin est correct
+                window.location.href = '/page/calendar.html'; // Rediriger vers la page du calendrier
             }, 2000);
         } else {
             throw new Error(donnees.message || 'Échec de la connexion');

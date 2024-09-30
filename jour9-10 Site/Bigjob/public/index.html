@@ -78,14 +78,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const utilisateur = JSON.parse(localStorage.getItem('utilisateur'));
-            if (utilisateur) {
-                document.getElementById('nav-connexion').style.display = 'none';
-                document.getElementById('nav-inscription').style.display = 'none';
-                document.getElementById('nav-utilisateur').style.display = 'block';
-                document.getElementById('nav-utilisateur').textContent = `Bonjour, ${utilisateur.nom}`;
-                document.getElementById('nav-calendrier').style.display = 'block';
-                document.getElementById('nav-deconnexion').style.display = 'block';
+            const utilisateurStr = localStorage.getItem('utilisateur');
+            if (utilisateurStr && utilisateurStr !== 'undefined') {
+                try {
+                    const utilisateur = JSON.parse(utilisateurStr);
+                    if (utilisateur) {
+                        document.getElementById('nav-connexion').style.display = 'none';
+                        document.getElementById('nav-inscription').style.display = 'none';
+                        document.getElementById('nav-utilisateur').style.display = 'block';
+                        document.getElementById('nav-utilisateur').textContent = `Bonjour, ${utilisateur.nom}`;
+                        document.getElementById('nav-calendrier').style.display = 'block';
+                        document.getElementById('nav-deconnexion').style.display = 'block';
+                    }
+                } catch (e) {
+                    console.error('Erreur lors du parsing JSON:', e);
+                }
             }
         });
     </script>

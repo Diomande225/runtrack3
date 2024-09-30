@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Temps</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Application Temps</h1>
+        <div class="time-display" id="timeDisplay">00:00:00</div>
+        <div>
+            <button id="timerBtn">Minuteur</button>
+            <button id="stopwatchBtn">Chronomètre</button>
+            <button id="alarmBtn">Réveil</button>
+        </div>
+        <div id="timerControls" style="display: none;">
+            <input type="text" id="timerInput" placeholder="Entrez le temps (HH:MM:SS)">
+            <button id="startStopTimer">Démarrer</button>
+            <button id="resetTimer">Réinitialiser</button>
+        </div>
+        <div id="stopwatchControls" style="display: none;">
+            <button id="startStopStopwatch">Démarrer</button>
+            <button id="lapStopwatch">Tour</button>
+            <button id="resetStopwatch">Réinitialiser</button>
+            <ul id="lapTimes"></ul>
+        </div>
+        <div id="alarmControls" style="display: none;">
+            <input type="time" id="alarmTime">
+            <input type="text" id="alarmMessage" placeholder="Message d'alarme">
+            <button id="setAlarm">Définir l'alarme</button>
+            <ul id="alarmList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

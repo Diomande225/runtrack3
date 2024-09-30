@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #ff5555;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: white;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffcb05;
+    color: #3c5aa6;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+button:hover {
+    background-color: #e6b400;
+}
+
+#autocomplete-results {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    max-width: 300px;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1000;
+    border-radius: 0 0 5px 5px;
+}
+
+.autocomplete-group {
+    padding: 10px;
+}
+
+.autocomplete-group strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #3c5aa6;
+}
+
+.autocomplete-group div {
+    padding: 5px 0;
+}
+
+.autocomplete-group a {
+    text-decoration: none;
+    color: #333;
+}
+
+.autocomplete-group a:hover {
+    text-decoration: underline;
+    color: #ff5555;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+li a {
+    color: #3c5aa6;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: underline;
+}

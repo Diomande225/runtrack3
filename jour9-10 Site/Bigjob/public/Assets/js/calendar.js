@@ -41,9 +41,15 @@ function ouvrirModalRendezVous(date) {
 }
 
 async function sauvegarderRendezVous() {
+    const utilisateur = JSON.parse(localStorage.getItem('utilisateur'));
     const date = document.getElementById('dateRendezVous').value;
     const heure = document.getElementById('heureRendezVous').value;
     const description = document.getElementById('descriptionRendezVous').value;
+
+    if (!utilisateur || !date || !heure || !description) {
+        M.toast({html: 'Tous les champs sont requis'});
+        return;
+    }
 
     try {
         const reponse = await fetch('/api/rendez-vous', {
@@ -52,7 +58,7 @@ async function sauvegarderRendezVous() {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${localStorage.getItem('token')}`
             },
-            body: JSON.stringify({ date, heure, description })
+            body: JSON.stringify({ utilisateur: utilisateur.id, date, heure, description })
         });
 
         if (!reponse.ok) {
@@ -65,7 +71,6 @@ async function sauvegarderRendezVous() {
         M.toast({html: 'Rendez-vous enregistré avec succès!'});
         const modalRendezVous = M.Modal.getInstance(document.getElementById('modalRendezVous'));
         modalRendezVous.close();
-        // Recharger les événements du calendrier
         calendar.refetchEvents();
     } catch (erreur) {
         console.error('Erreur lors de la sauvegarde du rendez-vous:', erreur);
